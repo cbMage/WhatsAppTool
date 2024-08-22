@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link href="index.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Herramienta de WhatsApp - LGA Seguros</title>
+    </head>
+    <body>
+        <main>
+            <div class="caja">
+                <article>
+                    <form>
+                        <label for="numero">Número:</label><br>
+                        <input type="text" id="numero"><br>
+                        <button type="button" id="boton">Abrir</button>
+                    </form>
+                    <div class="instructions">
+                        <p>Pegar número sin espacios o guiones.<br> Únicamente los 10 dígitos del número celular</p>
+                    </div>
+                </article>
+                
+            </div>
+        </main>
+        <script type="text/javascript">
+            const texto = document.getElementById("numero");
+            const boton = document.getElementById("boton");
+
+            boton.onclick = function(){
+                let numero = "https://wa.me/+52"+ String(texto.value);
+                window.open(numero, '_blank').focus();
+            }
+
+        </script>
+    </body>
+</html>
